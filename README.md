@@ -93,8 +93,8 @@ Keep releases small and frequent so students can pull cleanly; resolve conflicts
 ```
 .
 ├── src/
-│   └── network_utilities/
-│   └── plotting_utilities/
+│   ├── network_utilities.py
+│   └── plotting_utilities.py
 ├── tests/
 ├── notebooks/
 │   └── sequence_of_Jupyter_notebook_tutorials.ipynb
@@ -103,8 +103,8 @@ Keep releases small and frequent so students can pull cleanly; resolve conflicts
 ├── README.md
 └── .gitignore
 ```
-
-- `src/plotting_utils`: reusable plotting utilities for class exercises.
+- `src/network_utilities.py`: graph creation and validation utilities.
+- `src/plotting_utilities.py`: graph plotting helpers (show_* functions).
 - `notebooks`: Jupyter notebooks for demos and assignments.
 - `tests`: pytest-based unit/integration tests.
 - `data`: tracked folder with `.gitkeep`; contents are ignored by Git.
