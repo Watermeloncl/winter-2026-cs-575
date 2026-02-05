@@ -13,11 +13,11 @@ def test_hw4_problem3() -> None:
     
     ## Modify these values
     m = 1       # Probability of meeting
-    p = 0.4     # Transmission rate
-    gamma = 0.1 # Recovery rate
+    p = 0.6     # Transmission rate
+    gamma = 0.5 # Recovery rate
     N = 1000
     s0 = N-1
-    i0 = 1
+    i0 = minimum_population_size*0.2
     r0 = 0
     dt = 0.1
     duration = 140
@@ -33,6 +33,8 @@ def test_hw4_problem3() -> None:
     # Then
     infectious_history = my_simulation.I
     assert N >= minimum_population_size
+    print("infections: ", infectious_history[0])
     assert infectious_history[0] >= 0.2*N
     susceptible_history = my_simulation.S
+    print("sus: ", susceptible_history[-1])
     assert susceptible_history[-1] >= 0.4*N and susceptible_history[-1] <= 0.5*N

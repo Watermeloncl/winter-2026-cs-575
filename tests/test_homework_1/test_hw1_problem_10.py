@@ -7,15 +7,15 @@ def test_homework_problem_10() -> None:
     desired_minimum_density: float = 0.64
     desired_maximum_density: float = 0.68
 
-    # when
+    # when //14
     ## FIX THIS ADJACENCY LIST
-    adjacency_list: dict[int, set[int]] = {1: {2},
-                                           2: {3},
-                                           3: {4},
-                                           4: {5},
-                                           5: {1},
-                                           6: {5},
-                                           7: {6}}
+    adjacency_list: dict[int, set[int]] = {1: {2, 3, 4, 5, 6, 7},
+                                           2: {1, 3, 4, 5, 6},
+                                           3: {2, 4, 1},
+                                           4: {3, 5, 1, 2},
+                                           5: {4, 6, 1, 2},
+                                           6: {5, 7, 1, 2},
+                                           7: {6, 1}}
     G = adjacency_list_to_graph(adjacency_list)
 
     # then
